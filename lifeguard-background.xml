@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Lifeguard Background</name>
+		<description>for normal earth lifeguards</description>
+		<author url="https://www.youtube.com/watch?v=dQw4w9WgXcQ">James</author>
+		<update version="0.0.1">
+			<file name="lifeguard-background.xml"  />
+		</update>
+	</info>
+
+	<element name="Lifeguard" type="Background" source="Earth Liberation Project" id="ID_J_ELP_BACKGROUND_LIFEGUARD">
+		<description>
+			<p>You worked as a lifeguard before the apocalypse happened, and you were good at it too. </p>
+			<ul>
+				<li><strong>Skill Proficiencies:</strong> You can select any two skills to be proficient with. You also gain a swimming speed of 30 feet. </li>
+				<li><strong>Tool Proficiencies (Optional):</strong> You can be proficent with land or water vehicles, along with healer's kits.</li>
+				<li><strong>Languages (Optional):</strong> Choose any two languages</li>
+				<li><strong>Equipment:</strong> A swimsuit and red lifeguard shirt, a healer's kit, backpack, explorer's kit.</li>
+			</ul>
+			<div element="ID_J_ELP_BACKGROUND_FEATURE_MEDICAL_KNOWLEDGE" />
+		</description>
+		<rules>
+			<select type="Proficiency" name="Skill Proficiency (Lifeguard)" supports="Skill" number="2" />
+			<select type="Proficiency" name="Tool Proficiency (Lifeguard)" supports="Tool" optional="true"/>
+			<stat name="speed:swim" value="30" bonus="base"/>	<!-- stolen from fathomless class -->
+			<select type="Language" name="Language (Lifeguard)" optional="true" />
+			<select type="Language" name="Language (Lifeguard)" optional="true" />
+			<grant type="Background Feature" id="ID_NV_TGHC_BACKGROUND_FEATURE_MEDICAL_KNOWLEDGE" />
+			<select name="Personality Trait" type="List">
+				<item id="1">I am overly cautious and protective of life.</item>
+				<item id="2">I'm incredibly loud.</item>
+				<item id="3">I love to have fun. </item>
+				<item id="4">I take everything incredibly seriously.</item>
+				
+			</select>
+			<select name="Ideal" type="List">
+				<item id="1">I will do everything I can to protect life.</item>
+				<item id="2">I'm quick to resolve conflict, regardless of future consequences.</item>
+				<item id="3">By the book is the best way to fix issues.</item>
+				
+			</select>
+			<select name="Bond" type="List">
+				<item id="1">I am fiercely protective of those around me.</item>
+				<item id="2">Every life is valuable and worth saving.</item>
+				<item id="3">I know best in chaotic situations.</item>
+				
+			</select>
+			<select name="Flaw" type="List">
+				<item id="1">I think that I always know best.</item>
+				<item id="2">I'm quick to default to higher authority.</item>
+				<item id="3">I don't really like children.</item>
+				<item id="4">I'm quick to find a common solution, regardless of future implications.</item>
+				
+			</select>
+		</rules>
+	</element>
+	<element name="Feature: Medical Knowledge" type="Background Feature" source="Earth Liberation Project">
+		<description>
+			<p>As a Lifeguard, you gain the ear and friendly interest of people with medical backgrounds and you can leverage this interest into access to people and places you might not otherwise have.</p>
+			
+			
+		</description>
+		<sheet alt="Medical Knowledge">
+			<description>As a Lifeguard, you gain the ear and friendly interest of people with medical backgrounds and you can leverage this interest into access to people and places you might not otherwise have.</description>
+		</sheet>
+		
+	</element>
+</elements>
